@@ -1,5 +1,7 @@
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
+const lightDarkModeSpan = document.querySelector(".light-dark-mode");
+const lightDarkModeIcon = document.querySelector(".light-dark-mode > i");
 
 function addTask() {
   if (inputBox.value === "") {
@@ -38,3 +40,7 @@ function showTask() {
   listContainer.innerHTML = localStorage.getItem("data");
 }
 showTask();
+
+lightDarkModeSpan.addEventListener("click", () => {
+  document.documentElement.classList.toggle("light-theme");
+});

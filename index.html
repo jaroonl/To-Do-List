@@ -3,12 +3,21 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>To-Do List App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="container">
       <div class="todo-app">
-        <h2>To-Do List<img src="images/todoicon.png" /></h2>
+        <h2>
+          To-Do List<img src="images/todoicon.png" />
+          <span class="light-dark-mode">
+            <i class="fa-solid fa-sun"></i>
+          </span>
+        </h2>
         <div class="row">
           <input type="text" id="input-box" placeholder="Add your text" />
           <button onClick="addTask()">Add</button>

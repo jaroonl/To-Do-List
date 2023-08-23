@@ -8,21 +8,24 @@
 .container {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(35deg, #f9f2fa, #53abf3);
+  /* background: linear-gradient(35deg, #f9f2fa, #53abf3); */
+  background: var(--secondary-clr);
+  /* box-shadow: 0 0 0.3rem war(--secondary-clr); */
   padding: 10px;
 }
 
 .todo-app {
   width: 100%;
   max-width: 740px;
-  background: white;
+  background: var(--primary-rgba-7);
   margin: 100px auto 20px;
   padding: 40px 30px 70px;
   border-radius: 10px;
+  position: relative;
 }
 
 .todo-app h2 {
-  color: #282c33;
+  color: #000000;
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -54,7 +57,7 @@ button {
   border: none;
   outline: none;
   padding: 16px 50px;
-  background: #6eb8e9;
+  background: #9bd2f7;
   color: #fff;
   font-size: 16px;
   cursor: pointer;
@@ -84,7 +87,7 @@ ul li::before {
 }
 
 ul li.checked {
-  color: #555;
+  color: #050505;
   text-decoration: line-through;
 }
 
@@ -99,7 +102,7 @@ ul li span {
   width: 40px;
   height: 40px;
   font-size: 22px;
-  color: #555;
+  color: #000000;
   line-height: 40px;
   text-align: center;
   border-radius: 50%;
@@ -107,4 +110,44 @@ ul li span {
 
 ul li span:hover {
   background: #edeef0;
+}
+
+:root {
+  --primary-clr: #fff9f9;
+  --primary-rgba-7: rgba(199, 193, 193, 0.76);
+
+  --secondary-clr: #161616;
+  --secondary-rgba-3: rgba(0, 0, 0, 0.3);
+}
+
+.light-dark-mode {
+  width: 40px;
+  aspect-ratio: 1;
+  box-shadow: 0 0 0.3rem var(--secondary-rgba-3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-clr);
+  font-size: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  right: 10%;
+  transition: 200ms ease-in-out background-color, 200ms ease-in-out color;
+}
+
+.light-dark-mode:active {
+  transform: scale(0.8);
+}
+
+.light-dark-mode:hover {
+  background-color: var(--secondary-clr);
+}
+
+.light-theme {
+  --primary-clr: #161616;
+  --primary-rgba-7: rgba(146, 132, 132, 0.4);
+
+  --secondary-clr: #fff9f9;
+  --secondary-rgba-3: rgba(201, 198, 198, 0.849);
 }

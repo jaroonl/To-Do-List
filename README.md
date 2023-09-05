@@ -6,3 +6,5 @@ At its core, it is able to take in user inputs and save it on a list. You are ab
 All of your actions will be saved onto the web-browser (even if you refresh). There is also a light mode and dark mode option for whichever the user prefers.
 
 More features are to come but it is complete at its most basic level.
+
+Link to Web App: https://jaroonl.github.io/To-Do-List/
